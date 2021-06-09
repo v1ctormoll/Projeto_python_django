@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %} Página de Exclusão de Produto {% endblock %}
+{%block body%}
+    <h2>Excluir produto</h2>
+      <h3>Tem certeza?:{{cadeira.nome}}</h3>
+       <form method="post">
+           {% csrf_token %}
+           {{form.as_p}}
+           <button type="submit">Excluir</button>
+           <a href="{% url 'lista' %}">Cancelar exclusão</a>
+
+       </form>
+
+{%endblock%}

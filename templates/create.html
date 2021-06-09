@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} Página de Adição de Produto {% endblock %}
+
+{%block body%}
+    <h2>Adicione o produto</h2>
+       <form method="post">
+           {% csrf_token %}
+           {{form.as_p}}
+           <button type="submit">Salvar</button>
+
+       </form>
+
+{%endblock%}
